@@ -1,0 +1,80 @@
+body {
+  background-color: darkgray;
+  padding-top: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/*GLOCK*/
+
+#watch {
+  background-color: dodgerblue;
+  border-radius: 100%;
+  width: 16rem;
+  height: 16rem;
+  display: flex;
+  justify-content: center;
+}
+
+.stick {
+  background-color: black;
+}
+
+#minute {
+  width: 1px;
+  height: 7rem;
+  margin-top: 1rem;
+  transform-origin: bottom;
+  animation: circle 60s linear infinite;
+}
+
+#hour {
+  align-self: center;
+  margin-bottom: 4rem;
+  width: 1px;
+  height: 4rem;
+  transform-origin: bottom;
+  animation: circle 3600s forwards infinite;
+}
+
+@keyframes circle {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*BALL*/
+
+#jumpy {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  height: 12rem;
+  width: 16rem;
+}
+
+#ball {
+  margin-left: 8rem;
+  background-color: dodgerblue;
+  border-radius: 100%;
+  width: 4rem;
+  height: 4rem;
+  animation: swing 1s ease-in-out infinite;
+}
+
+@keyframes swing {
+  from {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-8rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
